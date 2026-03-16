@@ -98,7 +98,7 @@ http://localhost:5173
 
 ---
 
-## 📸 Application Flow
+##  Application Flow
 
 1️. Browse products on the home page
 2️. Add products to the cart
