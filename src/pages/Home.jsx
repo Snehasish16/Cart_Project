@@ -21,7 +21,7 @@ export default function Home() {
 
             <div className="d-flex justify-content-between align-items-center mb-4">
 
-                <h2 className="fst-italic text-secondary">Products</h2>
+                <h2 className="fst-italic text-secondary text-decoration-underline">Products</h2>
 
                 <select
                     className="form-select w-auto"
