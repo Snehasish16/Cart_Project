@@ -14,7 +14,6 @@ export default function Navbar() {
             }}
         >
             <div className="container-fluid d-flex justify-content-between align-items-center">
-                {/* Logo */}
                 <Link
                     className="navbar-brand text-white d-flex align-items-center gap-2"
                     to="/"
@@ -23,7 +22,6 @@ export default function Navbar() {
                     <h4 className="m-0 fw-bold fs-3">Cart Project</h4>
                 </Link>
 
-                {/* Cart Button */}
                 <Link
                     to="/cart"
                     className="btn position-relative d-flex align-items-center gap-2 px-3 py-2"
@@ -36,7 +34,6 @@ export default function Navbar() {
                 >
                     <i className="fa-solid fa-cart-shopping"></i>
                     Cart
-                    {/* Badge */}
                     <span
                         className="badge bg-danger position-absolute"
                         style={{

@@ -38,7 +38,7 @@
             "price": 3.99,
             "rating": 4.2,
             "stock": 150,
-            "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOti1iuPn0VW57j0kNAAZyG4LUWctEnXcepQ&s"
+            "thumbnail": "https://images-static.nykaa.com/media/catalog/product/3/8/38ddfeenykac00000256_1.jpg?tr=w-500"
         },
         {
             "id": 5,
@@ -48,7 +48,7 @@
             "price": 6.99,
             "rating": 4.5,
             "stock": 110,
-            "thumbnail": "https://www.planethealth.in/image/cache/catalog/LOL7-500x500.jpg"
+            "thumbnail": "https://www.silkrute.com/images/detailed/3124/QzGCkopLay_1500x.jpg"
         },
         {
             "id": 6,
@@ -199,16 +199,6 @@
             "rating": 4.0,
             "stock": 75,
             "thumbnail": "https://atinymistake.com/cdn/shop/products/BedsideTableTeakHues3.jpg?v=1678176450"
-        },
-        {
-            "id": 50,
-            "title": "Yoga Mat Premium",
-            "description": "Non-slip yoga mat for workouts.",
-            "category": "sports",
-            "price": 29.99,
-            "rating": 4.6,
-            "stock": 90,
-            "thumbnail": "https://rukminim2.flixcart.com/image/480/640/xif0q/sport-mat/1/t/m/premium-tpe-dual-color-anti-slip-with-cover-bag-navy-blue-sky-original-imah9cn8qxfd8kdf.jpeg?q=90"
         }
     ]
 }
