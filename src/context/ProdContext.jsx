@@ -1,3 +1,4 @@
+import axios from "axios";
 import { createContext, useEffect, useState } from "react";
 
 export const ProductContext = createContext();
@@ -7,9 +8,8 @@ export default function ProductProvider({ children }) {
     const [cart, setCart] = useState([]);
 
     async function getProducts() {
-        const res = await fetch("http://localhost:5000/products");
-        const data = await res.json();
-        setProducts(data);
+        const res = await axios.get("http://localhost:5000/products");
+        setProducts(res.data);
     }
 
     useEffect(() => {
