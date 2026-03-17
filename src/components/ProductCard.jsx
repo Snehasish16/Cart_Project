@@ -35,7 +35,7 @@ export default function ProductCard({ product }) {
                         className="btn add-btn text-light"
                         onClick={() => addToCart(product)}
                     >
-                        <i className="fa-solid fa-cart-shopping"></i>Add to Cart
+                        Add to Cart
                     </button>
                 </div>
             </div>
