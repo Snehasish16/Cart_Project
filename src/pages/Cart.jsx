@@ -1,9 +1,9 @@
 import { useContext, useState } from "react";
 import { ProductContext } from "../context/ProdContext";
 import CartItem from "../components/CartItem";
+import { Link } from "react-router-dom";
 
 export default function Cart() {
-
     const { cart, clearCart } = useContext(ProductContext);
 
     const [showSummary, setShowSummary] = useState(false);
@@ -11,7 +11,7 @@ export default function Cart() {
 
     const totalPrice = cart.reduce(
         (acc, item) => acc + item.price * item.qty,
-        0
+        0,
     );
 
     const deliveryCharge = 10;
@@ -19,16 +19,28 @@ export default function Cart() {
     const finalAmount = totalPrice + deliveryCharge + tax;
 
     if (cart.length === 0 && !showSuccess) {
-    return (
-        <div className="container mt-5 text-center text-danger">
-            <h3>Your cart is empty...</h3>
-        </div>
-    );
-}
+        return (
+            <div
+                className="container d-flex justify-content-center align-items-center"
+                style={{ height: "70vh" }}
+            >
+                <div className="text-center p-5 shadow rounded bg-light">
+                    <div style={{ fontSize: "60px" }}>🛒</div>
+                    <h2 className="mt-3 text-dark">Your Cart is Empty</h2>
+                    <p className="text-muted">
+                        Looks like you haven't added anything yet.
+                    </p>
+
+                    <Link to="/" className="btn btn-primary mt-3 px-4">
+                        Continue Shopping
+                    </Link>
+                </div>
+            </div>
+        );
+    }
 
     return (
         <div className="container my-5">
-
             <h2 className="mb-4">Shopping Cart</h2>
 
             {cart.map((item) => (
@@ -50,7 +62,6 @@ export default function Cart() {
                 </button>
             </div>
 
-
             {showSummary && (
                 <div
                     className="modal fade show d-block"
@@ -58,7 +69,6 @@ export default function Cart() {
                 >
                     <div className="modal-dialog modal-dialog-centered">
                         <div className="modal-content shadow border-0">
-
                             <div className="modal-header bg-dark text-white">
                                 <h5 className="modal-title">
                                     <i className="fa-solid fa-receipt me-2"></i>
@@ -72,7 +82,6 @@ export default function Cart() {
                             </div>
 
                             <div className="modal-body">
-
                                 <div className="d-flex justify-content-between mb-2">
                                     <span>Products Total</span>
                                     <strong>$ {totalPrice.toFixed(2)}</strong>
@@ -96,11 +105,9 @@ export default function Cart() {
                                         $ {finalAmount.toFixed(2)}
                                     </strong>
                                 </div>
-
                             </div>
 
                             <div className="modal-footer justify-content-center">
-
                                 <button
                                     className="btn btn-success px-4"
                                     onClick={() => {
@@ -112,14 +119,11 @@ export default function Cart() {
                                     <i className="fa-solid fa-credit-card me-2"></i>
                                     Pay Now
                                 </button>
-
                             </div>
-
                         </div>
                     </div>
                 </div>
             )}
-
 
             {showSuccess && (
                 <div
@@ -127,15 +131,13 @@ export default function Cart() {
                     style={{ background: "rgba(0,0,0,0.5)" }}
                 >
                     <div className="modal-dialog modal-dialog-centered">
-
                         <div className="modal-content border-0 shadow text-center p-4">
-
                             <div
                                 className="bg-success text-white rounded-circle d-flex align-items-center justify-content-center mx-auto mb-3"
                                 style={{
                                     width: "80px",
                                     height: "80px",
-                                    fontSize: "35px"
+                                    fontSize: "35px",
                                 }}
                             >
                                 <i className="fa-solid fa-check"></i>
@@ -159,13 +161,10 @@ export default function Cart() {
                             >
                                 Continue Shopping
                             </button>
-
                         </div>
-
                     </div>
                 </div>
             )}
-
         </div>
     );
 }

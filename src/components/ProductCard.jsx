@@ -6,24 +6,36 @@ export default function ProductCard({ product }) {
 
     return (
         <div className="col-md-3 mb-4">
-            <div className="card h-100 shadow">
-                <img
-                    src={product.thumbnail}
-                    alt={product.title}
-                    className="card-img-top img-fluid w-100 object-fit-cover"
-                    style={{ height: "300px" }}
-                />
+            <div className="card product-card h-100 shadow-sm border-0">
+                
+                <div className="image-wrapper">
+                    <img
+                        src={product.thumbnail}
+                        alt={product.title}
+                        className="card-img-top img-fluid"
+                    />
+
+                    <span className="badge bg-success position-absolute top-0 start-0 m-2">
+                        New
+                    </span>
+                </div>
 
                 <div className="card-body text-center">
-                    <h5>{product.title}</h5>
-                    <p className="text-success fw-bold">$ {product.price}</p>
+                    <h6 className="product-title">{product.title}</h6>
+
+                    <div className="rating mb-2">
+                        ⭐⭐⭐⭐☆
+                    </div>
+
+                    <p className="price">$ {product.price}</p>
                 </div>
-                <div className="card-footer text-center bg-light-subtle">
+
+                <div className="card-footer bg-transparent border-0 text-center">
                     <button
-                        className="btn btn-primary"
+                        className="btn add-btn text-light"
                         onClick={() => addToCart(product)}
                     >
-                        Add To Cart
+                        <i className="fa-solid fa-cart-shopping"></i>Add to Cart
                     </button>
                 </div>
             </div>
