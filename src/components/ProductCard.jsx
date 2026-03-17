@@ -7,7 +7,6 @@ export default function ProductCard({ product }) {
     return (
         <div className="col-md-3 mb-4">
             <div className="card product-card h-100 shadow-sm border-0">
-                
                 <div className="image-wrapper">
                     <img
                         src={product.thumbnail}
@@ -24,7 +23,11 @@ export default function ProductCard({ product }) {
                     <h6 className="product-title">{product.title}</h6>
 
                     <div className="rating mb-2">
-                        ⭐⭐⭐⭐☆
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
                     </div>
 
                     <p className="price">$ {product.price}</p>
